@@ -42,3 +42,9 @@ dotnet new web -o ItemStore -f net6.0
 | Delete | Delete Update resource  |
 
 
+These can easily be mapped in comands like these 
+```c#
+app.MapGet("/", () => "Hello World!");
+app.MapGet("/items/{id}", (int id) => ItemDB.GetItem(id));
+app.MapGet("/items", () => ItemDB.GetItems());
+```
